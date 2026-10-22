@@ -13,6 +13,7 @@ private/
 *secret*.json
 
 # Python environments and generated files
+!pyproject.toml
 .venv/
 venv/
 env/
@@ -49,3 +50,7 @@ temp/
 Thumbs.db
 .idea/
 .vscode/
+
+# Pytest temporary files
+.pytest_tmp/
+.pytest_cache/
