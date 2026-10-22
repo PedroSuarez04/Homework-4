@@ -128,6 +128,6 @@ def test_log_instruction_text_is_returned_as_data(server, monkeypatch, tmp_path)
     assert server.get_security_event(event["id"])["details"] == event["details"]
 
 
-@pytest.mark.skip(reason="Agent-level injection defenses and secret redaction are not implemented yet.")
+@pytest.mark.skip(reason="End-to-end model resistance to log injection needs a controlled live Gemini test setup.")
 def test_untrusted_events_cannot_trigger_actions_or_leak_secrets() -> None:
-    """Pending: exercise log injection and secret redaction through the real pipeline."""
+    """Pending: exercise malicious event text through a live Gemini response."""
